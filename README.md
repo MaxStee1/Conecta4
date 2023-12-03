@@ -2,9 +2,11 @@
 ### En este codigo se dearrolla el juego conecta 4 en el cual puedes seleccionar la dificultad de la IA
 
 Para compilar este codigo escribo el siguiente comando
+
 g++ -o main.exe main.cpp Game.cpp
 
 Para ejecutarlo
+
 .\main.exe
 
 
@@ -16,6 +18,7 @@ En este codigo simpre comienza el jugador, luego va la maquina
 - La maquina es representada por('O')
 
 
+
 <p>
 Puedes elegir entre tres modos de dificultad de la IA:
 </p>
@@ -25,19 +28,20 @@ Puedes elegir entre tres modos de dificultad de la IA:
 - Modo Dificl: En este caso, la IA primero ve si el jugador esta a punto de ganar, si no es asi, utiliza minimax para escoger la mejor jugada
 
 
-** Función evaluarTablero(Game* t, char figura) **
+
+** Función evaluarTablero(Game* t, char figura) *
 
 Evalua el estado actual del tablero y calcula una puntuación basada en la cantidad de fichas en línea para una figura dada ('X' o 'O') en filas, columnas y diagonales.
 
 
-** Función minimax(Game* tablero, int depth, bool maximizingPlayer, int alpha, int beta, char figura) **
+** Función minimax(Game* tablero, int depth, bool maximizingPlayer, int alpha, int beta, char figura) *
 
 Analiza posibles movimientos de jugadores en profundidad limitada y evalúa el tablero resultante.
 Utiliza la función evaluarTablero() para asignar una puntuación a cada estado del tablero.
 Implementa la poda alfa-beta para reducir la cantidad de nodos evaluados y mejorar la eficiencia del algoritmo minimax.
 
 
-** Función IAmodeDificil(Game* tablero) **
+** Función IAmodeDificil(Game* tablero) *
 
 Es la lógica de la inteligencia artificial para el modo de dificultad difícil.
 Primero verifica si el oponente ('X') tiene una jugada ganadora y trata de bloquearla si es posible.
@@ -50,7 +54,7 @@ Selecciona el mejor movimiento posible para la IA y actualiza el tablero con est
 
 El resultado se guarda dentro del archivo "partidas.csv" de la siguiente manera
 
-GANADOR(JUGADOR / MAQUINA)
+GANADOR(JUGADOR / MAQUINA) \n
 matriz resultante
 |
 GANADOR(JUGADOR / MAQUINA)
